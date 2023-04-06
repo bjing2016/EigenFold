@@ -1,6 +1,6 @@
 # EigenFold
 
-Implementation of **EigenFold: Generative Protein Structure Prediction with Diffusion Models** by Bowen Jing, Ezra Erives, Peter Pao-Huang, Gabriele Corso, Bonnie Berger, Tommi Jaakkola.
+Implementation of [EigenFold: Generative Protein Structure Prediction with Diffusion Models](https://arxiv.org/abs/2304.02198) by Bowen Jing, Ezra Erives, Peter Pao-Huang, Gabriele Corso, Bonnie Berger, Tommi Jaakkola.
 
 EigenFold is a diffusion generative model for protein structure prediction (i.e., known sequence -> distribution of structures). It is based on *harmonic diffusion*, which incorporates bond constraints in the diffusion modeling framework and results in a cascading-resolution generative process. This repository focuses on the experimental setting described in the paper---using OmegaFold embeddings to produce an ensemble of predicted backbone structures---but should be extensible to other settings.
 
@@ -73,3 +73,15 @@ Finally launch training (default settings as used in the paper)
 python train.py --splits splits/limit256.csv
 ```
 The model checkpoints will be saved under `workdir/[UNIX_TIME]`, timestamped according to the launch time. The training speed is approximate 12hrs / epoch.
+
+## Citation
+```
+@misc{jing2023eigenfold,
+      title={EigenFold: Generative Protein Structure Prediction with Diffusion Models}, 
+      author={Bowen Jing and Ezra Erives and Peter Pao-Huang and Gabriele Corso and Bonnie Berger and Tommi Jaakkola},
+      year={2023},
+      eprint={2304.02198},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.BM}
+}
+```
